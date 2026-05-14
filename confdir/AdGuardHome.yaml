@@ -1,3 +1,4 @@
+#esta es la configuracion que he realizado durante mi practica, al usar docker compose, se empezara de 0, la contraseña de la interfaz web de esta conf es 326Edwin
 http:
   pprof:
     port: 6060
