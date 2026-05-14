@@ -1,0 +1,26 @@
+services:
+  adguardhome:
+    image: adguard/adguardhome
+    container_name: adguardhome
+    restart: unless-stopped
+    # Persistencia de datos y configuración
+    volumes:
+      - ./workdir:/opt/adguardhome/work
+      - ./confdir:/opt/adguardhome/conf
+    # Puertos necesarios para DNS y Administración
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "80:80/tcp"
+      - "443:443/tcp"
+      - "443:443/udp"
+      - "3000:3000/tcp" # Panel de configuración inicial
+      - "853:853/tcp"  # DNS over TLS
+      - "7844:7844/udp" # DNS over HTTPS
+      - "8853:8853/udp" # DNS over QUIC
+    networks:
+      - adguard_net
+
+networks:
+  adguard_net:
+    driver: bridge
