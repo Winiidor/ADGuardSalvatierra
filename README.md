@@ -58,8 +58,6 @@ Edita el fitxer i apunta a la IP local:
 echo "nameserver 127.0.0.1" > /etc/resolv.conf
 ```
 
-> [INSERTA CAPTURA AQUÍ: Configuració DNS de l'equip]
-
 ## 📊 Guia d'Operació i Proves
 
 ### 1. Accés al Panell d'Administració
